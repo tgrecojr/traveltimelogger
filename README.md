@@ -23,7 +23,14 @@ The folllowing configuration values are used:
   }
 }
 ```
-
+### CRON Example
+* System set to UTC
+* Run every 5 minutes between 6AM and 10AM
+* Run every 5 minutes between 3PM and 7PM
+```
+*/5 11-23 * * * python gettraveltime.py >/dev/null 2>&1
+*/5 20-24 * * * python gettraveltime.py >/dev/null 2>&1
+```
 ### instalation requirements
 
 pip install googlemaps
